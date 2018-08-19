@@ -47,6 +47,9 @@ init-p01md.apple.com 0.0.0.0
 iadsdk.apple.com 0.0.0.0
 itunes.com 0.0.0.0
 p51-buy.itunes.apple.com 0.0.0.0
+dzc-metrics.mzstatic.com 0.0.0.0
+geo.itunes.apple.com 0.0.0.0
+idiagnostics.apple.com 0.0.0.0
 
 # iOS Updates
 mesu.apple.com 0.0.0.0
