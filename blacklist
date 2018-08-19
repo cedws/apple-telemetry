@@ -20,7 +20,6 @@ p11-quota.icloud.com
 cf.iadsdk.apple.com
 ocsp.apple.com
 xp.apple.com
-gsp-ssl-dynamic.ls-apple.com.akadns.net
 caldav.icloud.com
 init-p01st.push.apple.com
 cl4.apple.com
@@ -30,7 +29,6 @@ settings.crashlytics.com
 cl2.apple.com
 e.crashlytics.com
 e10499.dsce9.akamaiedge.net
-gsp64-ssl.ls-apple.com.akadns.net
 keyvalueservice.icloud.com
 pancake.apple.com
 api.smoot.apple.com
@@ -39,7 +37,6 @@ time-ios.apple.com
 partiality.itunes-apple.com.akadns.net
 gsas.apple.com
 gsa.apple.com
-gsp-ssl.ls2-apple.com.akadns.net
 iphonesubmissions.apple.com
 apptrailers.itunes.g.aaplimg.com
 gs-loc.apple.com
@@ -50,11 +47,6 @@ init-p01md.apple.com
 iadsdk.apple.com
 itunes.com
 p51-buy.itunes.apple.com
-gspe12-ssl.ls.apple.com
-gspe19-ssl.ls.apple.com
-gspe35-ssl.ls.apple.com
-gsp-ssl.ls.apple.com
-gsp64-ssl.ls.apple.com
 
 # iOS Updates
 mesu.apple.com
@@ -67,6 +59,16 @@ api.weather.com
 itunes.apple.com
 mzstatic.com
 iosapps.itunes.g.aaplimg.com
+
+# Apple Maps
+gsp-ssl-dynamic.ls-apple.com.akadns.net
+gsp-ssl.ls2-apple.com.akadns.net
+gsp64-ssl.ls-apple.com.akadns.net
+gspe12-ssl.ls.apple.com
+gspe19-ssl.ls.apple.com
+gspe35-ssl.ls.apple.com
+gsp-ssl.ls.apple.com
+gsp64-ssl.ls.apple.com
 
 # Apple Pay
 smp-paymentservices.apple.com
