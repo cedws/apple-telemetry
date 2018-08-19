@@ -1,0 +1,8 @@
+# Virtualenv
+bin/
+include/
+lib/
+lib64
+
+# Pip
+pip-selfcheck.json
