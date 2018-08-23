@@ -9,24 +9,27 @@ def get_entries(file):
     with open(file, "r") as entries:
         return entries.readlines()
 
+def sort_entries(file):
+    """
+    Sort the blacklist alphabetically. Keeps things nice and ordered.
+    """
+
+    entries = get_entries(file)
+    entries.sort()
+
+    with open(file, "w") as new:
+        new.writelines(["{}".format(entry) for entry in entries])
+
 def remove_duplicates(file):
     """
     Remove duplicate entries from a file.
     """
 
     entries = get_entries(file)
+    
     with open(file, "w") as new:
         for entry in set(entries):
             new.write(entry)
-
-def sort_blacklist(entries):
-    """
-    Sort the blacklist alphabetically. Keeps things nice and ordered.
-    """
-
-    with open("blacklist", "w") as new:
-        entries.sort()
-        new.writelines(["{}".format(entry) for entry in entries])
 
 async def generate_ip_blacklist(entries):
     with open("ip-blacklist", "w") as ip_blacklist:
@@ -42,9 +45,6 @@ def generate_cloaking_rules(entries):
         cloaking.writelines(["{} 0.0.0.0\n".format(entry.strip()) for entry in entries])
 
 async def main():
-    print("Sorting blacklist.")
-    sort_blacklist(get_entries("blacklist"))
-
     print("Generating IP blacklist.")
     await generate_ip_blacklist(get_entries("blacklist"))
 
@@ -59,5 +59,15 @@ async def main():
 
     print("Removing duplicates from cloaking rules.")
     remove_duplicates("cloaking-rules")
+
+    print("Sorting blacklist.")
+    sort_entries("blacklist")
+
+    print("Sorting IP blacklist.")
+    sort_entries("ip-blacklist")
+
+    print("Sorting cloaking rules.")
+    sort_entries("cloaking-rules")
+    
 
 loop.run_until_complete(main())
