@@ -30,4 +30,4 @@ Users should have more control over the telemetry sent by their smartphones. Not
 
 # Contribution
 
-If you come across any other domains, please submit a PR! Add the entries to the `blacklist` file then run `generate.py` with Python 3. It can take a few minutes because it has to make of DNS queries.
+If you come across any other domains, please submit a PR! Add the entries to the `blacklist` file then run `generate.py` with Python 3. It can take a few minutes because it has to make a lot of DNS queries.

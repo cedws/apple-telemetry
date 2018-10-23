@@ -81,7 +81,7 @@ async def main():
     entries = await remove_dead_entries(get_entries("blacklist"))
 
     with open("blacklist", "w") as blacklist:
-        blacklist.writelines([entry for entry in entries])
+        blacklist.writelines(entries)
 
     print("Generating IP blacklist.")
     await generate_ip_blacklist(entries)
@@ -106,6 +106,5 @@ async def main():
 
     print("Sorting cloaking rules.")
     sort_entries("cloaking-rules")
-    
 
 loop.run_until_complete(main())
