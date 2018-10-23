@@ -1,6 +1,6 @@
 # `ios-telemetry`
 
-Domain blocklists, IP blocklists, and cloaking files for domains that iOS frequently contacts. DNSCloak is an excellent app capable of using these files, but it's a bit of a pain to get the blocklists onto your device. 
+Domain blocklists, IP blocklists, and cloaking files for domains that iOS frequently contacts. DNSCloak is an excellent app capable of using these files, but it's a bit of a pain to get the blocklists onto your device. **Services such as updates, App Store, and Apple Pay will probably be blocked by this list.** You can remove entries manually, but this is tedious, so I recommend just temporarily disabling the blocklist when necessary.
 
 # Why?
 
@@ -28,8 +28,6 @@ Users should have more control over the telemetry sent by their smartphones. Not
 
 * Some domains may not be related to Apple. I've had to filter out the domains from my own blacklist log manually. However, some domains such as `weather.com` are contacted by built-in applications (Weather). Entries like these belong in this repository.
 
-* Services such as updates, App Store, and Apple Pay will probably be blocked. It is up to you to remove the domains you don't wish to block.
-
 # Contribution
 
-If you come across any other domains, please submit a PR! Add the entries to the `blacklist` file then run `generate.py` with Python 3.
+If you come across any other domains, please submit a PR! Add the entries to the `blacklist` file then run `generate.py` with Python 3. It can take a few minutes because it has to make of DNS queries.

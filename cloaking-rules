@@ -194,6 +194,7 @@ a948.g1.akamai.net 0.0.0.0
 a948.ga.akamai.net 0.0.0.0
 a968.g1.akamai.net 0.0.0.0
 a975.g.akamai.net 0.0.0.0
+aidc.apple.com 0.0.0.0
 albert.apple.com 0.0.0.0
 albert.gcsis-apple.com.akadns.net 0.0.0.0
 aod.itunes.apple.com 0.0.0.0
@@ -229,13 +230,11 @@ apptrailers.itunes.g.aaplimg.com 0.0.0.0
 ax.init.itunes.apple.com 0.0.0.0
 ax.itunes.apple.com 0.0.0.0
 bag.itunes.apple.com 0.0.0.0
-basejumper.apple.com 0.0.0.0
 beta.itunes.apple.com 0.0.0.0
 bn2-client-s.msnmessenger.msn.com.akadns.net 0.0.0.0
 bookkeeper.itunes.apple.com 0.0.0.0
 buy.itunes-apple.com.akadns.net 0.0.0.0
 buy.itunes.apple.com 0.0.0.0
-c12.apple.com 0.0.0.0
 caldav.fe.apple-dns.net 0.0.0.0
 caldav.icloud.com 0.0.0.0
 captive-cdn.origin-apple.com.akadns.net 0.0.0.0
@@ -500,7 +499,6 @@ gdcrl.godaddy.com.akadns.net 0.0.0.0
 gdmf.apple.com 0.0.0.0
 gdmf.apple.com.akadns.net 0.0.0.0
 geo.itunes.apple.com 0.0.0.0
-gkprofiledata.gc.apple.com 0.0.0.0
 gs-loc-new.ls-apple.com.akadns.net 0.0.0.0
 gs-loc.apple.com 0.0.0.0
 gs-loc.ls-apple.com.akadns.net 0.0.0.0
@@ -511,7 +509,6 @@ gsa.apple.com.akadns.net 0.0.0.0
 gsas.apple.com 0.0.0.0
 gsas.apple.com.akadns.net 0.0.0.0
 gsp-ssl-dynamic.ls-apple.com.akadns.net 0.0.0.0
-gsp-ssl-splitter.ls-apple.com.akadns.net 0.0.0.0
 gsp-ssl.ls-apple.com.akadns.net 0.0.0.0
 gsp-ssl.ls.apple.com 0.0.0.0
 gsp-ssl.ls2-apple.com.akadns.net 0.0.0.0
@@ -566,7 +563,6 @@ init-s01st.push.apple.com 0.0.0.0
 init.ess.apple.com 0.0.0.0
 init.gc.apple.com 0.0.0.0
 init.itunes.apple.com 0.0.0.0
-internalcheck.apple.com 0.0.0.0
 iosapps.itunes.apple.com 0.0.0.0
 iosapps.itunes.g.aaplimg.com 0.0.0.0
 iphone-ld.apple.com 0.0.0.0
@@ -1079,6 +1075,7 @@ time-osx.g.aaplimg.com 0.0.0.0
 time.apple.com 0.0.0.0
 tr.iadsdk.apple.com 0.0.0.0
 uic.itunes.apple.com 0.0.0.0
+updates-http.cdn-apple.com 0.0.0.0
 upp.itunes.apple.com 0.0.0.0
 us-courier.push-apple.com.akadns.net 0.0.0.0
 us-east-1-dynamic.meta-weights.apple-dns.net 0.0.0.0
