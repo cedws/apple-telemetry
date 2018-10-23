@@ -1,3 +1,4 @@
+import os
 import asyncio
 
 from aiodns import DNSResolver
@@ -59,7 +60,7 @@ def remove_duplicates(file):
             new.write(entry)
 
 async def generate_ip_blacklist(entries):
-    with open("ip-blacklist", "w") as ip_blacklist:
+    with open("release/ip-blacklist", "w") as ip_blacklist:
         for entry in entries:
             try:
                 ips = await resolver.query(entry.strip(), "A")
@@ -74,10 +75,13 @@ async def generate_ip_blacklist(entries):
                 pass
 
 def generate_cloaking_rules(entries):
-    with open("cloaking-rules", "w") as cloaking:
+    with open("release/cloaking-rules", "w") as cloaking:
         cloaking.writelines(["{} 0.0.0.0\n".format(entry.strip()) for entry in entries])
 
 async def main():
+    if not os.path.exists("release/"):
+        os.makedirs("release/")
+
     entries = await remove_dead_entries(get_entries("blacklist"))
 
     with open("blacklist", "w") as blacklist:
@@ -93,18 +97,18 @@ async def main():
     remove_duplicates("blacklist")
 
     print("Removing duplicates from IP blacklist.")
-    remove_duplicates("ip-blacklist")
+    remove_duplicates("release/ip-blacklist")
 
     print("Removing duplicates from cloaking rules.")
-    remove_duplicates("cloaking-rules")
+    remove_duplicates("release/cloaking-rules")
 
     print("Sorting blacklist.")
     sort_entries("blacklist")
 
     print("Sorting IP blacklist.")
-    sort_entries("ip-blacklist")
+    sort_entries("release/ip-blacklist")
 
     print("Sorting cloaking rules.")
-    sort_entries("cloaking-rules")
+    sort_entries("release/cloaking-rules")
 
 loop.run_until_complete(main())

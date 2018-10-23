@@ -9,7 +9,7 @@ Users should have more control over the telemetry sent by their smartphones. Not
 # Usage
 
 - Download DNSCloak, or another app capable of using DNS blocklists
-- Navigate to this repository in Safari
+- Navigate to [releases](https://github.com/c-edw/ios-telemetry/releases)
 - Copy the desired blocklist to your clipboard (`cloaking-rules` is recommended)
 - Download Textor, or another app capable of saving text to Files
 - In Textor, create a new file and paste the blocklist
