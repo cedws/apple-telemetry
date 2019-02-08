@@ -54,7 +54,7 @@ def remove_duplicates(file):
     """
 
     entries = get_entries(file)
-    
+
     with open(file, "w") as new:
         for entry in set(entries):
             new.write(entry)
@@ -78,6 +78,10 @@ def generate_cloaking_rules(entries):
     with open("release/cloaking-rules", "w") as cloaking:
         cloaking.writelines(["{} 0.0.0.0\n".format(entry.strip()) for entry in entries])
 
+def generate_hosts(entries):
+    with open("release/hosts", "w") as cloaking:
+        cloaking.writelines(["0.0.0.0 {}\n".format(entry.strip()) for entry in entries])
+
 async def main():
     if not os.path.exists("release/"):
         os.makedirs("release/")
@@ -93,6 +97,9 @@ async def main():
     print("Generating cloaking rules.")
     generate_cloaking_rules(entries)
 
+    print("Generate hosts file.")
+    generate_hosts(entries)
+
     print("Removing duplicates from blacklist.")
     remove_duplicates("blacklist")
 
@@ -102,6 +109,8 @@ async def main():
     print("Removing duplicates from cloaking rules.")
     remove_duplicates("release/cloaking-rules")
 
+    print("Removing duplicates from hosts file.")
+
     print("Sorting blacklist.")
     sort_entries("blacklist")
 
@@ -110,5 +119,8 @@ async def main():
 
     print("Sorting cloaking rules.")
     sort_entries("release/cloaking-rules")
+
+    print("Sorting hosts file.")
+    sort_entries("release/hosts")
 
 loop.run_until_complete(main())
