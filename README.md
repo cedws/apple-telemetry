@@ -18,9 +18,7 @@ Users should have more control over the telemetry sent by their smartphones. Not
 
 # Links
 
-- [Purpose of each domain](https://github.com/c-edw/ios-telemetry/wiki/Domains)
-- https://stan.sh/posts/dns-requests-of-ios-devices
-- https://cedwards.xyz/blog/ios-dns-privacy-investigation/
+- [Description of each domain](https://github.com/c-edw/ios-telemetry/wiki/Domains)
 
 # Notes
 
