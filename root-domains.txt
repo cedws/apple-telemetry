@@ -1,0 +1,17 @@
+aaplimg.com
+apple.com
+apple.com.akadns.net
+apple-dns.net
+buglife.com
+crashlytics.com
+ess-apple.com.akadns.net
+itunes-apple.com
+itunes-apple.com.akadns.net
+itunes.com
+itunes-nocookie.com
+ls-apple.com
+mzstatic.com
+oa-apple.com.akadns.net
+push-apple.com.akadns.net
+seed-siri-apple.com.akadns.net
+weather.com
