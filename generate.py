@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 import asyncio
 
@@ -5,7 +7,7 @@ from aiodns import DNSResolver
 from aiodns.error import DNSError
 
 loop = asyncio.get_event_loop()
-resolver = DNSResolver(loop=loop)
+resolver = DNSResolver(loop=loop, nameservers=["1.1.1.1", "8.8.8.8"])
 
 def get_entries(file):
     with open(file, "r") as entries:
