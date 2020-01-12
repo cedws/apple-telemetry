@@ -35,6 +35,7 @@
 2-courier.sandbox.push.apple.com
 2.courier-sandbox-push-apple.com.akadns.net
 30-courier.push.apple.com
+30.courier-push-apple.com.akadns.net
 31-courier.push.apple.com
 31.courier-push-apple.com.akadns.net
 32-courier.push.apple.com
@@ -201,6 +202,7 @@ aod.itunes.apple.com
 aod.itunes.g.aaplimg.com
 api-aka.smoot.apple.com
 api.apps.apple.com
+api-apps-lb.itunes-apple.com.akadns.net
 api.developer.apple.com
 api-edge.apps.apple.com
 api-glb-ams.smoot.apple.com
@@ -225,8 +227,10 @@ appldnld.g.aaplimg.com
 apple.com
 appleid.apple.com
 appleid.apple.com.akadns.net
+apple.news
 apps.itunes-nocookie.com
 apps-mzstatic-cdn.itunes-apple.com.akadns.net
+apps.mzstatic.com
 apptrailers.itunes.apple.com
 apptrailers.itunes.g.aaplimg.com
 ax.init.itunes.apple.com
@@ -347,6 +351,7 @@ gsp57-ssl-revgeo.ls.apple.com
 gsp57-ssl-revgeo.ls-apple.com.akadns.net
 gsp64-ssl.ls.apple.com
 gsp64-ssl.ls-apple.com.akadns.net
+gsp85-ssl.ls.apple.com
 gsp9-ssl.apple.com
 gsp9-ssl.ls-apple.com.akadns.net
 gspe11-ssl.ls.apple.com
@@ -423,6 +428,7 @@ mesu-cdn.origin-apple.com.akadns.net
 mesu.g.aaplimg.com
 msg-media.valueclick.akadns.net
 mt-ingestion-service-mr22.itunes-apple.com.akadns.net
+mt-ingestion-service-pv.itunes.apple.com
 mt-ingestion-service-pv.itunes-apple.com.akadns.net
 mt-ingestion-service-st11.itunes-apple.com.akadns.net
 mu21p02sa.guzzoni-apple.com.akadns.net
@@ -523,6 +529,7 @@ p23-availability.icloud.com
 p23-bookmarks.fe.apple-dns.net
 p23-bookmarks.icloud.com
 p23-buy.itunes.apple.com
+p23-buy.itunes-apple.com.akadns.net
 p23-caldav.fe.apple-dns.net
 p23-caldav.icloud.com
 p23-calendars.fe.apple-dns.net
@@ -813,6 +820,7 @@ pipe.cloudapp.aria.akadns.net
 pipe.prd.skypedata.akadns.net
 play-cdn.itunes-apple.com.akadns.net
 play.itunes.apple.com
+play.itunes.apple.com.edgesuite.net
 pop-eur-benelux-courier.push-apple.com.akadns.net
 pop-eur-central-courier.push-apple.com.akadns.net
 pop-namer-central-courier.push-apple.com.akadns.net
