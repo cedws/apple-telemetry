@@ -31,3 +31,7 @@ Users should have more control over the telemetry sent by their smartphones. Not
 ## Contribution
 
 If you come across any other domains, please submit a PR! Add the entries to the `blacklist` file then run `make` (you'll also need Python 3 - use the Poetry package manager). It can take a few minutes because it has to make a lot of DNS queries.
+
+## Similar Projects
+
+- https://gitlab.com/intr0/AppleBlock
