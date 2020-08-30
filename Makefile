@@ -1,10 +1,14 @@
 BLACKLIST=blacklist
 RELEASE_DIR=release
 
-all: cleanup gen-ip-blacklist gen-hosts gen-cloaking-rules
+all: cleanup gen-lsrules gen-ip-blacklist gen-hosts gen-cloaking-rules
 
 cleanup:
 	sort -u -o $(BLACKLIST) $(BLACKLIST)
+
+gen-lsrules:
+	mkdir -p $(RELEASE_DIR)
+	utils/lsrules.py < $(BLACKLIST) > $(RELEASE_DIR)/apple-telemetry.lsrules
 
 gen-ip-blacklist:
 	mkdir -p $(RELEASE_DIR)
