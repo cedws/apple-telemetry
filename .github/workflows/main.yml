@@ -29,7 +29,7 @@ jobs:
       - uses: ncipollo/release-action@v1
         with:
           artifacts: "release/*"
-          tag: ${GITHUB_RUN_NUMBER}
+          tag: ${{ github.run_number }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: dev-drprasad/delete-older-releases@v0.1.0
