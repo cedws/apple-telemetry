@@ -19,12 +19,9 @@ jobs:
 
       - name: Setup Poetry
         uses: abatilo/actions-poetry@v2.0.0
-      
-      - name: Open Poetry shell
-        run: poetry shell
-      
+
       - name: Install dependencies
         run: poetry install
 
-      - name: make all
-        run: make
+      - name: Run make all inside Poetry shell
+        run: poetry run make
