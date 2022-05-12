@@ -2,7 +2,9 @@
 
 Domain blocklists, IP blocklists, and cloaking files for domains that Apple devices frequently contact. DNSCloak is an excellent app capable of using these files, but it's a bit of a pain to get the blocklists onto your device. **Services such as updates, App Store, and Apple Pay will probably be blocked by this list.** You can remove entries manually, but this is tedious, so I recommend just temporarily disabling the blocklist when necessary.
 
-Here's a vague [overview of what each domain is for](https://github.com/adversarialtools/apple-telemetry/wiki/Domains).
+- Here's a vague [overview of what each domain is for](https://github.com/adversarialtools/apple-telemetry/wiki/Domains).
+
+- Here's a [list from apple](https://support.apple.com/en-us/HT210060) with a description for almost every domian you might want to whitelist.
 
 ## Why?
 
