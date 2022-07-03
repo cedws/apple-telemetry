@@ -15,7 +15,7 @@ def main():
             "remote-domains": entry.strip()
         })
 
-    desc = "Source: https://github.com/adversarialtools/apple-telemetry | Domains: {} | Updated: {}".format(len(rules), datetime.datetime.now())
+    desc = "Source: https://github.com/cedws/apple-telemetry | Domains: {} | Updated: {}".format(len(rules), datetime.datetime.now())
     root = {
         "description": desc,
         "name": "apple_telemetry",

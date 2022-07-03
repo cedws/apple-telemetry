@@ -2,7 +2,7 @@
 
 Domain blocklists, IP blocklists, and cloaking files for domains that Apple devices frequently contact. DNSCloak is an excellent app capable of using these files, but it's a bit of a pain to get the blocklists onto your device. **Services such as updates, App Store, and Apple Pay will probably be blocked by this list.** You can remove entries manually, but this is tedious, so I recommend just temporarily disabling the blocklist when necessary.
 
-Here's a vague [overview of what each domain is for](https://github.com/adversarialtools/apple-telemetry/wiki/Domains).
+Here's a vague [overview of what each domain is for](https://github.com/cedws/apple-telemetry/wiki/Domains).
 
 ## Why?
 
@@ -11,7 +11,7 @@ Users should have more control over the telemetry sent by their smartphones. Not
 ## Usage (iOS)
 
 - Download DNSCloak, or another app capable of using DNS blocklists
-- Navigate to [releases](https://github.com/adversarialtools/apple-telemetry/releases)
+- Navigate to [releases](https://github.com/cedws/apple-telemetry/releases)
 - Copy the desired blocklist to your clipboard (`cloaking-rules` is recommended)
 - Download Textor, or another app capable of saving text to Files
 - In Textor, create a new file and paste the blocklist
