@@ -10,15 +10,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.3.0
+      - uses: actions/checkout@v3
 
       - name: Set up Python 3.x
-        uses: actions/setup-python@v4.5.0
+        uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
       - name: Setup Poetry
-        uses: abatilo/actions-poetry@v2.2.0
+        uses: abatilo/actions-poetry@v2
 
       - name: Install dependencies
         run: poetry install
@@ -26,7 +26,7 @@ jobs:
       - name: Run make all inside Poetry shell
         run: poetry run make
 
-      - uses: ncipollo/release-action@v1.12.0
+      - uses: ncipollo/release-action@v1
         with:
           artifacts: "release/*"
           tag: ${{ github.run_number }}
