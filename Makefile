@@ -3,6 +3,18 @@ RELEASE_DIR=release
 
 all: cleanup gen-lsrules gen-ip-blacklist gen-hosts gen-cloaking-rules
 
+test-local:
+	@if [ ! -d "/tmp/artifacts" ]; then \
+		mkdir -p /tmp/artifacts && echo "Directory /tmp/artifacts created."; \
+	else \
+		echo "Directory /tmp/artifacts already exists."; \
+	fi && \
+	(command -v act-cli >/dev/null && exec act-cli --artifact-server-path /tmp/artifacts) || \
+	(command -v act >/dev/null && exec act --artifact-server-path /tmp/artifacts) || \
+	(command -v gh >/dev/null && exec gh extension exec act --artifact-server-path /tmp/artifacts) || \
+	echo "No available act command found"
+
+
 cleanup:
 	sort -u -o $(BLACKLIST) $(BLACKLIST)
 
