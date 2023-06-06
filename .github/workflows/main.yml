@@ -18,10 +18,13 @@ jobs:
       with:
         python-version: '3.11.3'
 
-    - name: Run image
-      uses: abatilo/actions-poetry@v2
+    - name: Install and configure Poetry
+      uses: snok/install-poetry@v1
       with:
-        poetry-version: 1.5.1
+        version: 1.5.1
+        virtualenvs-create: true
+        virtualenvs-in-project: true
+        installer-parallel: true
 
     - name: Install dependencies
       run: poetry install
@@ -29,15 +32,35 @@ jobs:
     - name: Run make all inside Poetry shell
       run: poetry run make
 
+    - name: Check ACT environment variable
+      id: check_act
+      run: echo "::set-output name=act_not_set::${{ env.ACT == '' }}"
+
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: release
+        path: release/*
+
+  release:
+    if: github.event_name == 'push' && needs.build.outputs.act_not_set == 'true'
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Download artifacts
+      uses: actions/download-artifact@v2
+      with:
+        name: release
+
     - uses: ncipollo/release-action@v1
-      if: ${{ !env.ACT }} # Skips step on act-cli during testing
       with:
         artifacts: "release/*"
         tag: ${{ github.run_number }}
         token: ${{ secrets.GITHUB_TOKEN }}
 
     - uses: dev-drprasad/delete-older-releases@v0.1.0
-      if: ${{ !env.ACT }} # Skips step on act-cli during testing
       with:
         keep_latest: 3
       env:
