@@ -3,6 +3,12 @@ RELEASE_DIR=release
 
 all: cleanup gen-lsrules gen-ip-blacklist gen-hosts gen-cloaking-rules
 
+test-local:
+	@command -v act-cli >/dev/null && exec act-cli || \
+	command -v act >/dev/null && exec act || \
+	command -v gh >/dev/null && exec gh extension exec act || \
+	echo "No available act command found"
+
 cleanup:
 	sort -u -o $(BLACKLIST) $(BLACKLIST)
 
